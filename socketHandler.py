@@ -2,11 +2,11 @@ import socket
 
 class socketHandler:
     
-    def closeSocketConnection(self,socketToClose):
+    def closeSocketConnection(socketToClose):
         socketToClose.close()
 
-    def createConnection(self,connectionHost,connectionPort):
+    def createConnection(connectionDetails):
         createdSocket = socket.socket()
         print("created socket")
-        createdSocket.connect((connectionHost,connectionPort))
+        createdSocket.connect()
         return createdSocket
