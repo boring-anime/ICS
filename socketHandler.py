@@ -7,5 +7,6 @@ class socketHandler:
 
     def createConnection(self,connectionHost,connectionPort):
         createdSocket = socket.socket()
+        print("created socket")
         createdSocket.connect((connectionHost,connectionPort))
         return createdSocket
