@@ -14,8 +14,14 @@ class dbHandler:
 
     def putData(self,connection,key,value):
         cursor = connection.cursor()
-        cursor.execute("Insert into records Values(%s,%s),key,value")
+        cursor.execute("Insert into records Values('%(key)s','%(value)s');" % locals()))
+        for i in cursor:
+            return i
 
-    def getData(self,key):
+    
+    def getData(self,connection,key):
+        print(key)
         cursor = connection.cursor()
-        cursor.execute("SELECT * FROM records WHERE userkey = %s;",(key))
+        cursor.execute("SELECT * FROM records WHERE userkey = '%(key)s';" % locals())
+        for i in cursor:
+            return i
