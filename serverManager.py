@@ -4,8 +4,8 @@ import socketHandler
 
 class server:
 
-    session = sessionManager()
-    sock = socketHandler()
+    session = sessionManager.sessionManager()
+    sock = socketHandler.socketHandler()
     def __init__(self, port=3030, hostname="localhost", maxAllowedConn=3):
         self.port = port
         self.hostname = hostname
