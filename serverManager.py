@@ -25,7 +25,7 @@ s = srvr.initializeServer()
 # def startListeningOnServer(serverSocket):
 print("waiting for connection")
 
-clientSocket, clientAddr = serverSocket.accept()
+clientSocket, clientAddr = s.accept()
 srvr.session.sendDataToSession(clientSocket,"hello")
 srvr.sock.closeSocketConnection(clientSocket)
 
