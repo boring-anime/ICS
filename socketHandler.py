@@ -2,10 +2,10 @@ import socket
 
 class socketHandler:
     
-    def closeSocketConnection(socketToClose):
+    def closeSocketConnection(self,socketToClose):
         socketToClose.close()
 
-    def createConnection(connectionDetails):
+    def createConnection(self,connectionDetails):
         createdSocket = socket.socket()
         print("created socket")
         createdSocket.connect(connectionDetails)
