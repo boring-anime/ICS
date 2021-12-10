@@ -20,7 +20,7 @@ class server:
     def stopServer(self,serverSocket):
         serverSocket.shutdown(0)
 
-srvr = server()
+srvr = server(3030,"172.17.0.2")
 s = srvr.initializeServer()
 # def startListeningOnServer(serverSocket):
 print("waiting for connection")
