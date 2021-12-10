@@ -8,5 +8,5 @@ class socketHandler:
     def createConnection(connectionDetails):
         createdSocket = socket.socket()
         print("created socket")
-        createdSocket.connect()
+        createdSocket.connect(connectionDetails)
         return createdSocket
